@@ -10,3 +10,4 @@ output
 *.gz
 *.data
 logs/
+.DS_Store
