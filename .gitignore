@@ -5,3 +5,4 @@ node_modules
 .deploy*/
 .DS_Store
 public/
+Desktop.ini
