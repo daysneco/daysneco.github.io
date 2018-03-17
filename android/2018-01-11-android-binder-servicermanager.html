@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/wiki/static/plugin/tipuesearch/css/tipuesearch.css">
         <link rel="shortcut icon" href="/wiki/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/wiki/favicon.ico" type="image/x-icon">
-        <title>Norris</title>
+        <title>ServiceManager守护进程 - Norris</title>
         <meta name="keywords" content="technology"/>
         <meta name="description" content="A wiki website of Norris"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,101 +43,38 @@
     <body>
         <div id="container">
             
-    <div id="wiki_title">Norris</div>
+<div id="header">
+  <div id="post-nav"><a href="/wiki/">Home</a>&nbsp;»&nbsp;<a href="/wiki/#android">android</a>&nbsp;»&nbsp;ServiceManager守护进程</div>
+</div>
+<div class="clearfix"></div>
+<div id="title">ServiceManager守护进程</div>
+<div id="content">
+  
+</div>
+<div id="content-footer">created in <span class="create-date date"> 2018-01-11 19:43先介绍 </span></div>
+<div id="comments"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script type="text/javascript">
+const gitment = new Gitment({
+  id: location.pathname,
+  title: 'ServiceManager守护进程',
+  owner: 'tracholar',
+  repo: 'wiki',
+  oauth: {
+    client_id: '0cc0476e504b5e70ae7c',
+    client_secret: 'ab98e39ef79469040057eba9c6b2b543b84c72ee',
+  },
+  // ...
+  // For more available options, check out the documentation below
+})
 
-    <div id="index">
-  
-    
-    
-    <h2 id="android">android</h2>
-      
-      <ul>
-          
-        <li class="pagelist">
-          <a href="./android/2018-01-11-android-build-soong.html">Android编译系统-Android.bp</a>
-        </li>
-          
-          
-        <li class="pagelist">
-          <a href="./android/2018-01-11-android-binder-servicermanager.html">ServiceManager守护进程</a>
-        </li>
-          
-          
-        <li class="pagelist">
-          <a href="./android/2018-01-09-android-telephony-subscription.html">Telephony之subscription介绍</a>
-        </li>
-          
-          
-        <li class="pagelist">
-          <a href="./android/2018-01-08-android-telephony-uicc.html">Telephony之UICC架构</a>
-        </li>
-          
-          
-        <li class="pagelist">
-          <a href="./android/2018-01-02-design-patterns-observer.html">设计模式之观察者模式</a>
-        </li>
-          
-      </ul>
-    <div class="clearfix"></div>
-    
-  
-    
-    
-    <h2 id="ims">ims</h2>
-      
-      <ul>
-          
-        <li class="pagelist">
-          <a href="./ims/2018-01-10-ims-auth.html">IMS鉴权</a>
-        </li>
-          
-      </ul>
-    <div class="clearfix"></div>
-    
-  
-    
-    
-    <h2 id="intro">intro</h2>
-      
-      <ul>
-          
-        <li class="pagelist">
-          <a href="./intro/gettingstarted.html">Getting Started</a>
-        </li>
-          
-      </ul>
-    <div class="clearfix"></div>
-    
-  
-    
-    
-    <h2 id="mathematics">mathematics</h2>
-      
-      <ul>
-          
-        <li class="pagelist">
-          <a href="./mathematics/2018-01-18-python-math.html">常见的数学公式</a>
-        </li>
-          
-      </ul>
-    <div class="clearfix"></div>
-    
-  
-    
-    
-    <h2 id="summary">summary</h2>
-      
-      <ul>
-          
-        <li class="pagelist">
-          <a href="./summary/2017_persnal_summary.html">2017年个人总结</a>
-        </li>
-          
-      </ul>
-    <div class="clearfix"></div>
-    
-  
-    </div>
+gitment.render('comments')
+// or
+// gitment.render(document.getElementById('comments'))
+// or
+// document.body.appendChild(gitment.render())
+</script>
 
         </div>
         <div id="footer">
