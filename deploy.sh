@@ -5,17 +5,17 @@ function init(){
     hexo install
 
     mkdir wiki
-    git clone -b wiki_source https://github.com/daysneco/daysneco.github.io.git wiki
+    git clone https://github.com/daysneco/wiki.git wiki
     cd wiki
     mkdir output
-    git clone -b gh-pages https://github.com/daysneco/daysneco.github.io.git output
+    git clone -b gh-pages https://github.com/daysneco/wiki.git output
     cd ../..
 }
 function update(){
     cd hexo
     git pull origin hexo_source
     cd ../wiki
-    git pull origin wiki_source
+    git pull origin master
     cd output
     git pull origin gh-pages
     cd ../..
@@ -33,8 +33,8 @@ function deploy(){
     cd ../wiki
     git add ./ --all
     git commint -am "update"
-    git pull origin wiki_source
-    git push origin wiki_source
+    git pull origin master
+    git push origin master
 
     simiki g
     cd output
@@ -44,13 +44,13 @@ function deploy(){
     git push origin gh-pages
     cd ../..
 }
-if [ "$1" = "init" ]; then
+if [ "$1" = "-i" ]; then
     echo "init"
     init
-elif [ "$1" = "update" ]; then
+elif [ "$1" = "-u" ]; then
     echo "update"
     update
-elif [ "$1" = "deploy" ]; then
+elif [ "$1" = "-d" ]; then
     echo "deploy"
     deploy
 fi

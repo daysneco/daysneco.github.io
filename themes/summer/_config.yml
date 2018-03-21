@@ -49,7 +49,7 @@ menu:
   home: /
   #categories: /categories/
   archives: /archives/
-  #about: /about/
+  about: https://daysneco.github.io/wiki/
   #tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404/
@@ -87,8 +87,9 @@ scheme: Mist
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
+  GitHub: https://github.com/daysneco
 
 # Social Links Icons
 # Icon Mapping:
