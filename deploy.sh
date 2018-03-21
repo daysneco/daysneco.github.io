@@ -1,15 +1,17 @@
 #!/bin/sh
 function init(){
-    mkdir hexo
-    git clone -b hexo_source https://github.com/daysneco/daysneco.github.io.git hexo
-    hexo install
-
     mkdir wiki
     git clone https://github.com/daysneco/wiki.git wiki
     cd wiki
     mkdir output
     git clone -b gh-pages https://github.com/daysneco/wiki.git output
     cd ../..
+    
+    mkdir hexo
+    git clone -b hexo_source https://github.com/daysneco/daysneco.github.io.git hexo
+    cd hexo
+    npm install -g hexo-cli
+    cd ..
 }
 function update(){
     cd hexo
@@ -21,16 +23,7 @@ function update(){
     cd ../..
 }
 function deploy(){
-    cd hexo
-    hexo clean
-    hexo g
-    hexo deploy
-    git add . --all
-    git commit -am "update"
-    git pull origin hexo_source
-    git push origin hexo_source
-
-    cd ../wiki
+    cd wiki
     git add ./ --all
     git commint -am "update"
     git pull origin master
@@ -43,6 +36,14 @@ function deploy(){
     git pull origin gh-pages
     git push origin gh-pages
     cd ../..
+
+    cd hexo
+    git add . --all
+    git commit -am "update"
+    git pull origin hexo_source
+    git push origin hexo_source
+    hexo clean && hexo g && hexo deploy
+    cd ..
 }
 if [ "$1" = "-i" ]; then
     echo "init"

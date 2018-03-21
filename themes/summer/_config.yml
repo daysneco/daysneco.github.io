@@ -49,10 +49,11 @@ menu:
   home: /
   #categories: /categories/
   archives: /archives/
-  about: https://daysneco.github.io/wiki/
+  #about: /about/
   #tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404/
+  wiki: https://daysneco.github.io/wiki/
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -70,6 +71,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
+  wiki: file
 
 
 # ---------------------------------------------------------------

@@ -4,14 +4,16 @@ if "%1"=="-d" goto deploy
 goto deploy
 
 :init
-md hexo
-git clone -b hexo_source https://github.com/daysneco/daysneco.github.io.git hexo
 md wiki
 git clone https://github.com/daysneco/wiki.git wiki
 cd wiki
 md output
 git clone -b gh-pages git@github.com:daysneco/wiki.git output
-cd ../hexo
+
+cd ..
+md hexo
+git clone -b hexo_source https://github.com/daysneco/daysneco.github.io.git hexo
+cd hexo
 npm install -g hexo-cli
 cd ..
 goto end
@@ -29,7 +31,7 @@ goto end
 :deploy
 cd wiki
 git add ./ --all
-git commint -am "update"
+git commit -am "update"
 git pull origin master
 git push origin master
 
@@ -42,13 +44,11 @@ git push origin gh-pages
 cd ../..
 
 cd hexo
-hexo clean
-hexo g
-hexo deploy
 git add . --all
 git commit -am "update"
 git pull origin hexo_source
 git push origin hexo_source
+hexo clean && hexo g && hexo d
 cd ..
 goto end
 
