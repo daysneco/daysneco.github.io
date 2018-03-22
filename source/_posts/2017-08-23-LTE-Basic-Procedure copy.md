@@ -1,6 +1,6 @@
 ---
 title: LTE Basic Procedure
-date: 2017-08-23 15:35:39
+date: 2017-08-24 15:35:39
 tags: LTE
 ---
 
