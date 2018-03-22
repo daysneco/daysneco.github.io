@@ -7,8 +7,11 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -35,36 +38,7 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -73,37 +47,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="LTE," />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.6">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.6">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.6">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.6" color="#222">
 
 
 
-<meta name="description" content="UE is Off Power On UE &amp;lt; Frequency Search &amp;gt;">
-<meta name="keywords" content="LTE">
-<meta property="og:type" content="article">
-<meta property="og:title" content="LTE Basic Procedure">
-<meta property="og:url" content="http://daysneco.com/2017/08/23/2017-08-23-LTE-Basic-Procedure/index.html">
-<meta property="og:site_name" content="Norris">
-<meta property="og:description" content="UE is Off Power On UE &amp;lt; Frequency Search &amp;gt;">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-19T11:49:05.326Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LTE Basic Procedure">
-<meta name="twitter:description" content="UE is Off Power On UE &amp;lt; Frequency Search &amp;gt;">
+
+
+
 
 
 
@@ -112,14 +74,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"remove","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"remove","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
-    motion: false,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -131,12 +92,40 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="标题一标题二标题三标题四标题五标题六 月落乌啼霜满天，江枫渔火对愁眠。股数城外寒山寺，夜半钟声到客船。">
+<meta name="keywords" content="LTE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LTE Basic Procedure">
+<meta property="og:url" content="http://daysneco.com/2017/08/23/2017-08-23-LTE-Basic-Procedure/index.html">
+<meta property="og:site_name" content="Norris">
+<meta property="og:description" content="标题一标题二标题三标题四标题五标题六 月落乌啼霜满天，江枫渔火对愁眠。股数城外寒山寺，夜半钟声到客船。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.w3.org/html/logo/img/mark-word-icon.png">
+<meta property="og:updated_time" content="2018-03-22T12:04:15.159Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LTE Basic Procedure">
+<meta name="twitter:description" content="标题一标题二标题三标题四标题五标题六 月落乌啼霜满天，江枫渔火对愁眠。股数城外寒山寺，夜半钟声到客船。">
+<meta name="twitter:image" content="http://www.w3.org/html/logo/img/mark-word-icon.png">
+
+
+
+
+
 
   <link rel="canonical" href="http://daysneco.com/2017/08/23/2017-08-23-LTE-Basic-Procedure/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>LTE Basic Procedure | Norris</title>
   
@@ -149,10 +138,32 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-
-
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -163,16 +174,18 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="site-title">Norris</span>
       </a>
     </div>
@@ -182,7 +195,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -197,34 +210,40 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+</li>
+
       
         
-        <li class="menu-item menu-item-wiki">
-          <a href="https://daysneco.github.io/wiki/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />
-            
-            wiki
-          </a>
-        </li>
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-wiki">
+    <a href="https://daysneco.github.io/wiki/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-file"></i> <br />wiki</a>
+</li>
+
       
 
       
@@ -232,16 +251,28 @@
   
 
   
+    
+
+  
+
+  
 </nav>
+
+
+  
 
 
 
  </div>
     </header>
 
+    
+
+
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -252,6 +283,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -286,13 +319,12 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-23T15:35:39+08:00">
-                2017-08-23
-              </time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-23T15:35:39+08:00">2017-08-23</time>
             
 
+            
             
 
             
@@ -326,42 +358,228 @@
       
 
       
-        <ul>
-<li>UE is Off</li>
-<li>Power On UE</li>
-<li>&lt; Frequency Search &gt; <a id="more"></a></li>
-<li>&lt; Timing Sync &gt;</li>
-<li>&lt; Cell Search &gt; : Normally a UE would find multiple cells in this process</li>
-<li>&lt; Cell Selection &gt;</li>
-<li>MIB decoding</li>
-<li>SIB decoding</li>
-<li>&lt; Initial RACH Process &gt;</li>
-<li>&lt; Registration/Authentication/Attach&gt;</li>
-<li>&lt; Default EPS Bearer Setup &gt;</li>
-<li>Now UE is in IDLE Mode</li>
-<li>&lt;(If the cursrent cell become weak or UE moves to another cell register) Cell Reselection&gt;</li>
-<li>&lt;(When Paging message comes or User make a call) RACH Process&gt;</li>
-<li>&lt; Setup Dedicated EPS Bearer &gt;</li>
-<li>Receive data</li>
-<li>Transmit data</li>
-<li>(If UE power is percieved too weak by the network) Network send TPC command to increase UE Tx Power</li>
-<li>(If UE power is percieved too strong by the network) Network send TPC command to decrease UE Tx Power</li>
-<li>(If UE moves to another cell region) Network and UE perform Handover procedure &gt;User stop call and UE gets into IDLE mode</li>
+        <h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><h4 id="标题四"><a href="#标题四" class="headerlink" title="标题四"></a>标题四</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5><h6 id="标题六"><a href="#标题六" class="headerlink" title="标题六"></a>标题六</h6><blockquote>
+<p>月落乌啼霜满天，江枫渔火对愁眠。股数城外寒山寺，夜半钟声到客船。</p>
+</blockquote>
+<a id="more"></a>
+<p>Markdown For Typora</p>
+<p>Overview</p>
+<p><strong>Markdown</strong> is created by Daring Fireball, the original guideline is here. Its syntax, however, varies between different parsers or editors. Typora is using GitHub Flavored Markdown. </p>
+<blockquote>
+<p>Please note that HTML fragments in markdown source will be recognized but not parsed or rendered. Also, there may be small reformatting on the original markdown source code after saving.</p>
+</blockquote>
+<hr>
+<ol>
+<li><strong>列表</strong>11111111</li>
+<li>列表2</li>
+<li>列表3</li>
+<li>列表4<br>Outline</li>
+</ol>
+<p>[TOC]</p>
+<blockquote>
+<p>Block Elements</p>
+</blockquote>
+<p>Paragraph and line breaks</p>
+<p>A paragraph is simply one or more consecutive lines of text. In markdown source code, paragraphs are separated by more than one blank lines. In Typora, you only need to press Return to create a new paragraph.</p>
+<p>Press Shift + Return to create a single line break. However, most markdown parser will ignore single line break, to make other markdown parsers recognize your line break, you can leave two whitespace at the end of the line, or insert <br>.</p>
+<p>Headers</p>
+<p>Headers use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. For example:</p>
+<pre><code># This is an H1
+
+## This is an H2
+
+###### This is an H6
+</code></pre><p>In typora, input ‘#’s followed by title content, and press Return key will create a header.</p>
+<p>Blockquotes</p>
+<p>Markdown uses email-style &gt; characters for block quoting. They are presented as:</p>
+<pre><code>&gt; This is a blockquote with two paragraphs. This is first paragraph.
+&gt;
+&gt; This is second pragraph.Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+
+
+&gt; This is another blockquote with one paragraph. There is three empty line to seperate two blockquote.
+</code></pre><p>In typora, just input ‘&gt;’ followed by quote contents a block quote is  generated. Typora will insert proper ‘&gt;’ or line break for you. Block quote inside anther block quote is allowed by adding additional levels of ‘&gt;’. </p>
+<p>Lists</p>
+<p>Input <em> list item 1 will create an un-ordered list, the </em> symbol can be replace with + or -. </p>
+<p>Input 1. list item 1 will create an ordered list, their markdown source code is like:</p>
+<pre><code>## un-ordered list
+*   Red
+*   Green
+*   Blue
+
+## ordered list
+1.  Red
+2.     Green
+3.    Blue
+</code></pre><p>Task List</p>
+<p>Task lists are lists with items marked as either [ ] or [x] (incomplete or complete). For example:</p>
+<pre><code>- [ ] a task list item
+- [ ] list syntax required
+- [ ] normal **formatting**, @mentions, #1234 refs
+- [ ] incomplete
+- [x] completed
+</code></pre><p>You can change the complete/incomplete state by click the checkbox before the item.</p>
+<p>(Fenced) Code Blocks</p>
+<p>Typora only support fences in Github Flavored Markdown. Original code blocks in markdown is not supported.</p>
+<p>Using fences is easy: Input <figure class="highlight plain"><figcaption><span>press return. Add an optional language identifier after ``` and we'll run it through syntax highlighting:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Here&apos;s an example:</span><br></pre></td></tr></table></figure></p>
+<pre><code>function test() {
+  console.log(&quot;notice the blank line before this function?&quot;);
+}
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">syntax highlighting:</span><br><span class="line">```ruby</span><br><span class="line">require &apos;redcarpet&apos;</span><br><span class="line">markdown = Redcarpet.new(&quot;Hello World!&quot;)</span><br><span class="line">puts markdown.to_html</span><br></pre></td></tr></table></figure>
+</code></pre><p>Math Blocks</p>
+<p>You can render LaTeX mathematical expressions using MathJax.</p>
+<p>Input $$, then press ‘Return’ key will trigger an input field which accept Tex/LaTex source. Following is an example:</p>
+<p>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}</p>
+<p>In markdown source file, math block is LaTeX expression wrapped by ‘$$’ mark:</p>
+<pre><code>$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\
+\end{vmatrix}
+$$
+</code></pre><p>Tables</p>
+<p>Input | First Header  | Second Header | and press return key will create a table with two column.</p>
+<p>After table is created, focus on that table will pop up a toolbar for table, where you can resize, align, or delete table. You can also use context menu to copy and add/delete column/row.</p>
+<p>Following descriptions can be skipped, as markdown source code for tables are generated by typora automatically.</p>
+<p>In markdown source code, they look like:</p>
+<pre><code>| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+</code></pre><p>You can also include inline Markdown such as links, bold, italics, or strikethrough.</p>
+<p>Finally, by including colons : within the header row, you can define text to be left-aligned, right-aligned, or center-aligned:</p>
+<pre><code>| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+</code></pre><p>A colon on the left-most side indicates a left-aligned column; a colon on the right-most side indicates a right-aligned column; a colon on both sides indicates a center-aligned column.</p>
+<p>Footnotes</p>
+<pre><code>You can create footnotes like this[^footnote].
+
+[^footnote]: Here is the *text* of the **footnote**.
+</code></pre><p>will produce:</p>
+<p>You can create footnotes like thisfootnote.</p>
+<p>[footnote]: Here is the text of the footnote.</p>
+<p>Mouse on the ‘footnote’ superscript to see content of the footnote.</p>
+<p>Horizontal Rules</p>
+<p>Input *** or — on a blank line and press return will draw a horizontal line.</p>
+<hr>
+<p>YAML Front Matter</p>
+<p>Typora support YAML Front Matter now. Input — at the top of the article and then press Enter will introduce one. Or insert one metadata block from the menu.</p>
+<p>Table of Contents (TOC)</p>
+<p>Input [toc] then press Return key will create a section for “Table of Contents” extracting all headers from one’s writing, its contents will be updated automatically. </p>
+<p>Diagrams (Sequence, Flowchart and Mermaid)</p>
+<p>Typora supports, sequence, flowchart and mermaid, after this feature is enabled from preference panel.</p>
+<p>See this document for detail.</p>
+<p>Span Elements</p>
+<p>Span elements will be parsed and rendered right after your typing. Moving cursor in middle of those span elements will expand those elements into markdown source. Following will explain the syntax of those span element.</p>
+<p>Links</p>
+<p>Markdown supports two style of links: inline and reference.</p>
+<p>In both styles, the link text is delimited by [square brackets].</p>
+<p>To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an optional title for the link, surrounded in quotes. For example:</p>
+<pre><code>This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.
+</code></pre><p>will produce:</p>
+<p>This is an example inline link. (</p><p>This is <a href="http://example.com/" title="Title" target="_blank" rel="noopener">)</a></p>
+<p>This link has no title attribute. (</p><p><a href="http://example.net/" target="_blank" rel="noopener">This link</a> has no)</p>
+<p>Internal Links</p>
+<p>You can set the href to headers, which will create a bookmark that allow you to jump to that section after clicking. For example:</p>
+<p>Command(on Windows: Ctrl) + Click This link will jump to header Block Elements. To see how to write that, please move cursor or click that link with ⌘ key pressed to expand the element into markdown source.</p>
+<p>Reference Links</p>
+<p>Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:</p>
+<pre><code>This is [an example][id] reference-style link.
+
+Then, anywhere in the document, you define your link label like this, on a line by itself:
+
+[id]: http://example.com/  &quot;Optional Title Here&quot;
+</code></pre><p>In typora, they will be rendered like:</p>
+<p>This is an example reference-style link.</p>
+<p>The implicit link name shortcut allows you to omit the name of the link, in which case the link text itself is used as the name. Just use an empty set of square brackets — e.g., to link the word “Google” to the google.com web site, you could simply write:</p>
+<pre><code>[Google][]
+And then define the link:
+
+[Google]: http://google.com/
+</code></pre><p>In typora click link will expand it for editing, command+click will open the hyperlink in web browser.</p>
+<p>URLs</p>
+<p>Typora allows you to insert urls as links, wrapped by <brackets>.</brackets></p>
+<p><a href="mailto:&#x69;&#x40;&#116;&#x79;&#112;&#111;&#x72;&#x61;&#x2e;&#x69;&#111;" target="_blank" rel="noopener">&#x69;&#x40;&#116;&#x79;&#112;&#111;&#x72;&#x61;&#x2e;&#x69;&#111;</a> becomes <a href="mailto:i@typora.io" target="_blank" rel="noopener">i@typora.io</a>.</p>
+<p>Typora will aslo auto link standard URLs. e.g: <a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a>.</p>
+<p>Images</p>
+<p>Image looks similar with links, but it requires an additional ! char before the start of link. Image syntax looks like this:</p>
+<pre><code>![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+</code></pre><p>You are able to use drag &amp; drop to insert image from image file or we browser. And modify the markdown source code by clicking on the image. Relative path will be used if image is in same directory or sub-directory with current editing document when drag &amp; drop.</p>
+<p>For more tips on images, please read <a href="http://support.typora.io//Images/" target="_blank" rel="noopener">http://support.typora.io//Images/</a></p>
+<p>Emphasis</p>
+<p>Markdown treats asterisks (<em>) and underscores (_) as indicators of emphasis. Text wrapped with one </em> or _ will be wrapped with an HTML <em> tag. E.g:</em></p>
+<pre><code>*single asterisks*
+
+_single underscores_
+</code></pre><p>output: </p>
+<p>single asterisks</p>
+<p>single underscores</p>
+<p>GFM will ignores underscores in words, which is commonly used in code and names, like this:</p>
+<p>wow_great_stuff</p>
+<p>do_this_and_do_that_and_another_thing.</p>
+<p>To produce a literal asterisk or underscore at a position where it would otherwise be used as an emphasis delimiter, you can backslash escape it:</p>
+<pre><code>\*this text is surrounded by literal asterisks\*
+</code></pre><p>Typora recommends to use * symbol.</p>
+<p>Strong</p>
+<p>double *’s or _’s will be wrapped with an HTML <strong> tag, e.g:</strong></p>
+<pre><code>**double asterisks**
+
+__double underscores__
+</code></pre><p>output:</p>
+<p>double asterisks</p>
+<p>double underscores</p>
+<p>Typora recommends to use ** symbol.</p>
+<p>Code</p>
+<p>To indicate a span of code, wrap it with backtick quotes (`). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:</p>
+<pre><code>Use the `printf()` function.
+</code></pre><p>will produce:</p>
+<p>Use the printf() function.</p>
+<p>Strikethrough</p>
+<p>GFM adds syntax to create strikethrough text, which is missing from standard Markdown.</p>
+<p><del>Mistaken text.</del> becomes Mistaken text.</p>
+<p>Underline</p>
+<p>Underline is powered by raw HTML.</p>
+<p><u>Underline</u> becomes Underline.</p>
+<p>Emoji 😄</p>
+<p>Input emoji with syntax :smile:. </p>
+<p>User can trigger auto-complete suggestions for emoji by pressing ESC key, or trigger it automatically after enable it on preference panel. Also, input UTF8 emoji char directly from Edit -&gt; Emoji &amp; Symbols from menu bar is also supported. </p>
+<p>HTML</p>
+<p>Typora cannot render html fragments. But typora can parse and render very limited HTML fragments, as an extension of Markdown, including:</p>
+<ul>
+<li>Underline: <u>underline</u></li>
+<li>Image: <img src="http://www.w3.org/html/logo/img/mark-word-icon.png" width="200px"> (And width, height attribute in HTML tag, and width, height, zoom style in style attribute will be applied.)</li>
+<li>Comments: <!-- This is some comments --></li>
+<li>Hyperlink: <a href="http://typora.io" target="_blank">link</a>.</li>
 </ul>
+<p>Most of their attributes, styles, or classes will be ignored. For other tags, typora will render them as raw HTML snippets. </p>
+<p>But those HTML will be exported on print or export.</p>
+<p>Inline Math</p>
+<p>To use this feature, first, please enable it in Preference Panel -&gt; Markdown Tab. Then use $ to wrap TeX command, for example: $\lim_{x \to \infty} \exp(-x) = 0$ will be rendered as LaTeX command. </p>
+<p>To trigger inline preview for inline math: input “$”, then press ESC key, then input TeX command, a preview tooltip will be visible like below:</p>
+<p>Subscript</p>
+<p>To use this feature, first, please enable it in Preference Panel -&gt; Markdown Tab. Then use ~ to wrap subscript content, for example: H~2~O, X~long\ text~/</p>
+<p>Superscript</p>
+<p>To use this feature, first, please enable it in Preference Panel -&gt; Markdown Tab. Then use ^ to wrap superscript content, for example: X^2^.</p>
+<p>Highlight</p>
+<p>To use this feature, first, please enable it in Preference Panel -&gt; Markdown Tab. Then use == to wrap superscript content, for example: ==highlight==. </p>
 
       
     </div>
-    
-    
-    
-    <div>
-      
-        
-<div style="text-align:center;color: #ccc;font-size:14px;">
------- 本文结束 ------</div>
 
-      
-    </div>
+    
+
+    
+    
+    
 
     
 
@@ -392,7 +610,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/23/2017-08-23-LTE-Basic-Procedure copy 2/" rel="prev" title="LTE Basic Procedure">
+              <a href="/2017/08/24/2017-08-23-LTE-Basic-Procedure copy/" rel="prev" title="LTE Basic Procedure">
                 LTE Basic Procedure <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -420,11 +638,8 @@
           </div>
           
 
+  
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
 
 
         </div>
@@ -434,19 +649,35 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Norris</span>
+
+  
+
+  
 </div>
 
 
 
+
+
+
+
+
+
+
+
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -457,6 +688,8 @@
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -477,7 +710,6 @@
 
 
 
-  
 
 
 
@@ -490,55 +722,53 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
   
   
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
 
 
 
   
 
 
-  
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
 
+
+
+  
 
 
 
@@ -561,6 +791,10 @@
 
 
 
+
+
+
+
   
 
 
@@ -569,6 +803,13 @@
 
   
 
+  
+
+  
+
+  
+
+  
   
 
   
