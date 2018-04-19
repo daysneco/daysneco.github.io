@@ -506,7 +506,7 @@ And then define the link:
 </code></pre><p>In typora click link will expand it for editing, command+click will open the hyperlink in web browser.</p>
 <p>URLs</p>
 <p>Typora allows you to insert urls as links, wrapped by <brackets>.</brackets></p>
-<p><a href="mailto:&#x69;&#x40;&#116;&#x79;&#112;&#111;&#x72;&#x61;&#x2e;&#x69;&#111;" target="_blank" rel="noopener">&#x69;&#x40;&#116;&#x79;&#112;&#111;&#x72;&#x61;&#x2e;&#x69;&#111;</a> becomes <a href="mailto:i@typora.io" target="_blank" rel="noopener">i@typora.io</a>.</p>
+<p><a href="mailto:&#105;&#64;&#116;&#x79;&#112;&#111;&#x72;&#x61;&#46;&#105;&#111;" target="_blank" rel="noopener">&#105;&#64;&#116;&#x79;&#112;&#111;&#x72;&#x61;&#46;&#105;&#111;</a> becomes <a href="mailto:i@typora.io" target="_blank" rel="noopener">i@typora.io</a>.</p>
 <p>Typora will aslo auto link standard URLs. e.g: <a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a>.</p>
 <p>Images</p>
 <p>Image looks similar with links, but it requires an additional ! char before the start of link. Image syntax looks like this:</p>
@@ -808,6 +808,36 @@ __double underscores__
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
   
