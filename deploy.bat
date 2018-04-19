@@ -1,6 +1,7 @@
 if "%1"=="-i"  goto init
 if "%1"=="-u" goto update
 if "%1"=="-d" goto deploy
+if "%1"=="-t" goto Test
 goto deploy
 
 :init
@@ -51,5 +52,8 @@ git push origin hexo_source
 hexo clean && hexo g && hexo d
 cd ..
 goto end
+
+:Test
+hexo g && hexo s -p 4001
 
 :end
