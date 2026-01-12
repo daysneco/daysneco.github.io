@@ -1,0 +1,53 @@
+@import 'variables';
+
+@media (max-width: 768px) {
+  // Navigation
+  .main-nav .nav-container {
+    padding: 0 $spacing-md;
+  }
+
+  .main-nav .nav-item {
+    font-size: $font-size-base;
+    padding: $spacing-sm 0;
+  }
+
+  // Home page
+  .home-page .intro .site-title {
+    font-size: 32px;
+  }
+
+  .home-page .post-card {
+    padding: $spacing-md;
+
+    .post-header {
+      flex-direction: column;
+    }
+
+    .post-title {
+      font-size: $font-size-lg;
+    }
+  }
+
+  // Tags page
+  .tags-page .page-title {
+    font-size: 28px;
+  }
+
+  .tags-page .category-section {
+    padding: $spacing-md;
+  }
+
+  // Post
+  .post .post-header .post-title {
+    font-size: 24px;
+  }
+
+  .post .post-content {
+    font-size: $font-size-sm;
+  }
+
+  // Container
+  .container {
+    padding: 0 $spacing-md;
+  }
+}

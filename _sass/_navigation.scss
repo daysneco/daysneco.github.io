@@ -1,0 +1,37 @@
+@import 'variables';
+
+.main-nav {
+  background: #fff;
+  border-bottom: 1px solid $border-color;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+
+  .nav-container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+    display: flex;
+    gap: $spacing-lg;
+  }
+
+  .nav-item {
+    padding: $spacing-md 0;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    color: $text-secondary;
+    border-bottom: 2px solid transparent;
+    transition: $transition;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    &.active {
+      color: $text-color;
+      border-bottom-color: $text-color;
+    }
+  }
+}

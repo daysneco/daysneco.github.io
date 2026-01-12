@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="tags-page">
+  <h1 class="page-title">Tags</h1>
+
+  <div class="categories-list">
+    {% for category in site.categories %}
+    <div class="category-section">
+      <h2 class="category-name" id="{{ category[0] | slugify }}">
+        <a href="#{{ category[0] | slugify }}">{{ category[0] }}</a>
+        <span class="category-count">[{{ category[1].size }}]</span>
+      </h2>
+      <ul class="category-posts">
+        {% for post in category[1] %}
+        <li class="category-post">
+          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+          <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</div>

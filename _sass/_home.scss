@@ -1,0 +1,82 @@
+@import 'variables';
+
+.home-page {
+  padding: $spacing-xl 0;
+
+  .intro {
+    margin-bottom: $spacing-xl;
+    text-align: center;
+
+    .site-title {
+      font-size: 48px;
+      font-weight: 700;
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: $spacing-sm;
+    }
+
+    .site-description {
+      color: $text-secondary;
+      font-size: $font-size-lg;
+    }
+  }
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  .post-card {
+    background: #fff;
+    border-radius: $border-radius-lg;
+    padding: $spacing-lg;
+    box-shadow: $card-shadow;
+    transition: $transition;
+    border: 1px solid $border-color;
+
+    &:hover {
+      box-shadow: $card-hover-shadow;
+      transform: translateY(-2px);
+    }
+
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: $spacing-md;
+      margin-bottom: $spacing-sm;
+    }
+
+    .post-title {
+      font-size: $font-size-xl;
+      font-weight: 600;
+      margin: 0;
+
+      a {
+        background: $gradient-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+
+    .post-date {
+      color: $text-light;
+      font-size: $font-size-sm;
+      white-space: nowrap;
+    }
+
+    .post-excerpt {
+      color: $text-secondary;
+      font-size: $font-size-base;
+      line-height: 1.7;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
