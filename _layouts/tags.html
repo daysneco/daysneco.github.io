@@ -14,8 +14,8 @@ layout: default
       </h2>
       <ul class="category-posts">
         {% for post in category[1] %}
-        <li class="category-post">
-          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <li class="category-post {% cycle 'odd', 'even' %}">
+          <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
           <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
         </li>
         {% endfor %}
