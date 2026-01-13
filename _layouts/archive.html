@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="tags-page">
+  <ul class="category-posts">
+    {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+    {% for post in sorted_posts %}
+    <li class="category-post {% cycle 'odd', 'even' %}">
+      <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
+      <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
