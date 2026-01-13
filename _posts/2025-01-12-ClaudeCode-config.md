@@ -3,8 +3,6 @@ title: Claude Code配置教程
 categories: AI
 ---
 
-# Claude Code配置教程
-
 ## 前置要求
 
 在配置 Claude Code 之前，请确保您的系统已安装以下工具：
