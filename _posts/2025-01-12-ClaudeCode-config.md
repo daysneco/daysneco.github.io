@@ -1,3 +1,9 @@
+---
+title: Claude Code配置教程
+categories: AI
+---
+
+# Claude Code配置教程
 
 ## 前置要求
 
