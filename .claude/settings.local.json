@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nStyle: enlarge and bold Justin nav brand\n\n- Add nav-brand class to Justin link in header\n- Add styling for nav-brand with larger font size and bold weight\n- Remove unused blog posts\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}

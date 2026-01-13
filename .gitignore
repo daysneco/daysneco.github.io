@@ -7,6 +7,7 @@ _site/
 # OS files
 .DS_Store
 Thumbs.db
+nul
 
 # Editor files
 .vscode/
