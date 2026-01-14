@@ -1,5 +1,5 @@
 ---
-title: Claude Code配置教程
+title: 别再死磕代码！Claude Code配置详解，效率起飞 🚀
 categories: AI
 ---
 
