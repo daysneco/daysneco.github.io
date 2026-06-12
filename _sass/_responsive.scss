@@ -11,11 +11,6 @@
     padding: $spacing-sm 0;
   }
 
-  // Home page
-  .home-page .intro .site-title {
-    font-size: 32px;
-  }
-
   .home-page .post-card {
     padding: $spacing-md;
 
@@ -43,7 +38,8 @@
   }
 
   .post .post-content {
-    font-size: $font-size-sm;
+    font-size: 17px;
+    line-height: 1.85;
   }
 
   // Container
