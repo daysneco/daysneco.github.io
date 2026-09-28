@@ -1,0 +1,309 @@
+@import 'variables';
+
+// Wide container for post pages with left TOC sidebar
+.container--wide {
+  max-width: 1200px;
+}
+
+body.page-post .main-nav .nav-container {
+  max-width: 1200px;
+}
+
+// Wrapper for Post Layout with TOC
+.post-layout-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  padding: $spacing-xl 0;
+
+  // When no TOC is present, center the post
+  &.no-toc {
+    .post-toc-rail,
+    .mobile-toc {
+      display: none !important;
+    }
+
+    .post {
+      max-width: $container-max-width;
+      margin: 0 auto;
+    }
+  }
+
+  .post {
+    flex: 1;
+    min-width: 0; // Prevent pre/code overflow from expanding flex item
+    max-width: 840px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Left Table of Contents Rail (Inspired by reference site)
+.post-toc-rail {
+  width: 250px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding-right: 18px;
+  border-right: 1px solid $border-color;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+
+  .toc-sticky-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .back-to-archive {
+    font-size: 0.8125rem;
+    color: $text-secondary;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    transition: $transition;
+
+    &:hover {
+      color: $text-color;
+      opacity: 1;
+      transform: translateX(-2px);
+    }
+  }
+
+  .rail-label {
+    letter-spacing: 0.14em;
+    color: #8c8c8c;
+    margin-bottom: 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .post-toc-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    .toc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 7px 10px;
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      color: $text-secondary;
+      border-radius: $border-radius-sm;
+      border-left: 2px solid transparent;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.04);
+        color: $text-color;
+        opacity: 1;
+      }
+
+      &.active {
+        color: $text-color;
+        background: rgba(102, 126, 234, 0.08);
+        border-left: 2px solid #667eea;
+        padding-left: 8px;
+        font-weight: 600;
+
+        .rail-number {
+          color: #667eea;
+          opacity: 1;
+          font-weight: 700;
+        }
+      }
+
+      .rail-number {
+        font-variant-numeric: tabular-nums;
+        opacity: 0.65;
+        flex: none;
+        padding-top: 1px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $text-secondary;
+      }
+
+      .rail-title {
+        flex: 1;
+        word-break: break-word;
+      }
+
+      // Subsection (H3)
+      &.subsection {
+        padding-left: 24px;
+        font-size: 0.775rem;
+        color: #777;
+
+        &.active {
+          padding-left: 22px;
+          color: $text-color;
+          border-left: 2px solid #667eea;
+        }
+      }
+    }
+  }
+
+  .rail-bottom {
+    border-top: 1px solid $border-color;
+    margin-top: 24px;
+    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .back-to-top {
+      font-size: 0.75rem;
+      color: $text-light;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: $transition;
+
+      &:hover {
+        color: $text-color;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Mobile Collapsible TOC
+.mobile-toc {
+  display: none;
+  margin-bottom: $spacing-lg;
+  background: #ffffff;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+  summary {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: $font-size-base;
+    font-weight: 600;
+    color: $text-color;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    background: #fafaf8;
+    transition: background 0.2s ease;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      background: #f4f3ec;
+    }
+
+    .mobile-toc-icon {
+      margin-right: 8px;
+    }
+
+    .mobile-toc-title {
+      font-size: $font-size-sm;
+      font-weight: 600;
+    }
+
+    .mobile-toc-arrow {
+      margin-left: auto;
+      transition: transform 0.2s ease;
+      font-size: 0.75rem;
+      color: $text-secondary;
+    }
+  }
+
+  &[open] summary .mobile-toc-arrow {
+    transform: rotate(180deg);
+  }
+
+  .mobile-toc-nav {
+    padding: 8px 12px 12px;
+    border-top: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 45vh;
+    overflow-y: auto;
+
+    .toc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: $font-size-sm;
+      color: $text-secondary;
+      padding: 6px 8px;
+      border-radius: $border-radius-sm;
+      text-decoration: none;
+
+      .rail-number {
+        font-variant-numeric: tabular-nums;
+        font-size: 0.75rem;
+        color: #888;
+        flex-shrink: 0;
+      }
+
+      &.subsection {
+        padding-left: 20px;
+        opacity: 0.85;
+      }
+
+      &:hover,
+      &.active {
+        background: rgba(102, 126, 234, 0.08);
+        color: #667eea;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Heading Anchor Margin
+.post-content {
+  h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 85px;
+  }
+}
+
+// Responsive behavior
+@media (max-width: 1024px) {
+  .post-layout-wrapper {
+    display: block;
+    padding: $spacing-lg 0;
+
+    .post-toc-rail {
+      display: none;
+    }
+
+    .mobile-toc {
+      display: block;
+    }
+
+    .post {
+      max-width: 100%;
+    }
+  }
+}

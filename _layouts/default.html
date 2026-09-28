@@ -3,9 +3,9 @@
 <head>
   {% include head.html %}
 </head>
-<body>
+<body{% if page.layout == 'post' %} class="page-post"{% endif %}>
   {% include header.html %}
-  <main class="container">
+  <main class="container{% if page.layout == 'post' %} container--wide{% endif %}">
     {{ content }}
   </main>
   {% include footer.html %}

@@ -2,24 +2,57 @@
 layout: default
 ---
 
-<article class="post">
-  <div class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-meta">
-      <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%Y-%m-%d" }}
-      </time>
-      {% if page.categories %}
-      <span class="post-categories">
-        {% for category in page.categories %}
-          <span class="category">{{ category }}</span>
-        {% endfor %}
-      </span>
-      {% endif %}
+<div class="post-layout-wrapper" id="post-layout-wrapper">
+  <!-- 左侧目录侧边栏 (参考 bojieli.github.io 样式) -->
+  <aside class="post-toc-rail" id="post-toc-rail" aria-label="文章目录">
+    <div class="toc-sticky-inner">
+      <a class="back-to-archive" href="/archive/">
+        <span aria-hidden="true">←</span> 全部文章
+      </a>
+      <p class="rail-label">目录</p>
+      <nav class="post-toc-navigation" id="post-toc-nav" aria-label="目录导航">
+        <!-- 由 JavaScript 动态生成 -->
+      </nav>
+      <div class="rail-bottom">
+        <a href="#" class="back-to-top" id="toc-back-to-top">
+          回到顶部 <span aria-hidden="true">↑</span>
+        </a>
+      </div>
     </div>
-  </div>
+  </aside>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
-</article>
+  <!-- 正文区域 -->
+  <article class="post">
+    <!-- 移动端目录折叠卡片（仅小屏幕显示） -->
+    <details class="mobile-toc" id="mobile-toc">
+      <summary class="mobile-toc-summary">
+        <span class="mobile-toc-icon">📑</span>
+        <span class="mobile-toc-title">文章目录</span>
+        <span class="mobile-toc-arrow">▾</span>
+      </summary>
+      <nav class="mobile-toc-nav" id="mobile-toc-nav">
+        <!-- 由 JavaScript 动态生成 -->
+      </nav>
+    </details>
+
+    <div class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%Y-%m-%d" }}
+        </time>
+        {% if page.categories %}
+        <span class="post-categories">
+          {% for category in page.categories %}
+            <span class="category">{{ category }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+</div>
